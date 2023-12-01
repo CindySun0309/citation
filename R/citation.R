@@ -3,7 +3,7 @@ library(httr)
 library(jsonlite)
 
 search <- function(name, key) {
-
+#User need to input the name of the article and the API key in order to search
   search_url <- paste0("https://serpapi.com/search?engine=google_scholar&q=",
                        utils::URLencode(name),
                        "&api_key=", key
