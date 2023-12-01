@@ -1,33 +1,30 @@
-library(rvest)
-library(httr)
-library(jsonlite)
-
-
-# example
-name <- c("Recognition and prevention of child abuse in the child with disability")
-key <- c("8efa1b058c869298ced0ed407f3886f9ca45042acdd23691e48b6bced92d3652")
-
-
-
-search <- function(name, key) {
+#' @title Creating an APA citation
+#'
+#' @description Given the name of the article and the user's API key, this
+#' function returns a character string of APA citation for that article.
+#'
+#'
+#'
+#' @param name The name of the article
+#' @param key The API key of the user
+#'
+#' @return A character string of APA citation
+#'
+#' @importFrom jsonlite read_json
+#' @export
+APA <- function(name, key) {
 #User need to input the name of the article and the API key in order to search
   search_url <- paste0("https://serpapi.com/search?engine=google_scholar&q=",
                        utils::URLencode(name),
                        "&api_key=", key
   )
-  article <- read_json(search_url)
+  article <- jsonlite::read_json(search_url)
 
   serpapi_cite_link <- article$organic_results[[1]]$inline_links$serpapi_cite_link
 
-  citation_json <- read_json(paste0(serpapi_cite_link, "&api_key=", key))
+  citation_json <- jsonlite::read_json(paste0(serpapi_cite_link, "&api_key=", key))
 
-  citation_json$citations
-  BibTex_html <- citation_json[["links"]][[1]][["link"]]
-  BibTex <- read_html(paste0(BibTex_html, "&api_key=", key))
-  citation_json[["citations"]][[2]][["snippet"]]
-
+  #citation_json$citations
+  APA_citation <- citation_json[["citations"]][[2]][["snippet"]]
+  return(APA_citation)
 }
-
-
-
-search("Recognition and prevention of child abuse in the child with disability", "8efa1b058c869298ced0ed407f3886f9ca45042acdd23691e48b6bced92d3652")
