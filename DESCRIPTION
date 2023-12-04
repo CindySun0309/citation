@@ -12,3 +12,6 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 URL: https://github.com/CindySun0309/citation
 BugReports: https://github.com/CindySun0309/citation/issues
+Depends: 
+    R (>= 2.10)
+LazyData: true
