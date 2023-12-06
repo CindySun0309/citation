@@ -1,7 +1,7 @@
 
-#' @title Creating an APA citation
+#' Creating an APA citation
 #'
-#' @description Given the name of the article and the user's API key, this
+#' Given the name of the article and the user's API key, this
 #' function returns a character string of APA citation for that article.
 #'
 #'

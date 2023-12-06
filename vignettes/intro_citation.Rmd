@@ -1,0 +1,40 @@
+---
+title: "citation"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{citation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(citation)
+```
+
+The `citation` package provides an R interface to retrieve APA citation about a research article (link the article) from Google scholar website - and most importantly, output a character string of the APA citation!
+
+## Creating APA citations
+
+Given a article title and the API code the `APA()` function  retrieves a JSON object with metadata about that APA format citation.
+
+To utilize the `APA()` function, users must first generate an API key by signing up in advance [here](https://serpapi.com/users/sign_up). To create an account with [SerpAPI](https://serpapi.com/), users need to provide their email address and phone number during the registration process.
+ 
+```{r}
+API_key <- readLines("api.txt")
+```
+
+```{r example}
+library(citation)
+
+APA <- APA("Abuse is abuse: The influence of type of abuse, victim age, and defendant age on juror decision making", API_key)
+
+APA
+```
+
