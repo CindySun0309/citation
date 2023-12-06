@@ -1,21 +1,33 @@
 Package: citation
-Title: What the Package Does (One Line, Title Case)
+Title: Acquire APA citation and metadata
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+    person("Katy", "Cummings", , "kcummings.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID")),
+    person("Elaine", "Xu", , "exu64@smith.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID")),
+    person("Cindy", "Sun", , "csun76@smith.edu", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Description: 
+      The purpose of this package, citation, is to make it easier for users to properly use/obtain an APA citation(s). 
+      This package requires users to have a Google API code and the article title that they would like to have cited.
+      Once the user provides this information, the package then runs necessary functions/operational commands to create an APA citation (APA_citation), which is returned to the user. 
+      In addition to these features, this package also comes with a metadata set, citation_data.
+License: `use_mit_license()`
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+Imports: 
+    jsonlite
 URL: https://github.com/CindySun0309/citation
 BugReports: https://github.com/CindySun0309/citation/issues
 Depends: 
     R (>= 2.10)
 LazyData: true
 Suggests: 
+    dplyr,
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
 VignetteBuilder: knitr
