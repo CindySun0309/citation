@@ -1,7 +1,7 @@
 
-#' @title Creating an APA citation
+#' Creating an APA citation
 #'
-#' @description Given the name of the article and the user's API key, this
+#' Given the name of the article and the user's API key, this
 #' function returns a character string of APA citation for that article.
 #'
 #'
@@ -29,12 +29,3 @@ APA <- function(name, key) {
   APA_citation <- citation_json[["citations"]][[2]][["snippet"]]
   return(APA_citation)
 }
-
-
-
-function_factory <- function() {
-  ##create a dataframe using the mock dataset
-  root_dir <- rprojroot::find_root(criterion = rprojroot::is_r_package)
-  pilot_df <- read.csv(file.path(root_dir, "data", "270dataset - Sheet1 (2).csv"))
-  return(pilot_df)
-  }
