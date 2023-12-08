@@ -11,7 +11,6 @@ A data frame with 1 rows and 4 columns
 \item{year}{Year article was published}
 \item{title}{Title of the article}
 \item{publication}{Additional publication material including Journal title, Volume of journal, Issue number of journal and Page range of article.
-
 }
 }
 \source{

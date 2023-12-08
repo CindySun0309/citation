@@ -24,7 +24,7 @@ Description:
       This package requires users to have a Google API code and the article title that they would like to have cited.
       Once the user provides this information, the package then runs necessary functions/operational commands to create an APA citation (APA_citation), which is returned to the user. 
       In addition to these features, this package also comes with a metadata set, citation_data.
-License: `use_mit_license()`
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
