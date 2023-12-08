@@ -17,7 +17,7 @@ Authors@R: c(
     family = "Cummings", 
     email = "kcummings@smith.edu", 
     role = "aut", 
-    comment = c(ORCID = "YOUR-ORCID-ID")), 
+    comment = c(ORCID = "YOUR-ORCID-ID")) 
     )
 Description: 
       The purpose of this package, citation, is to make it easier for users to properly use/obtain an APA citation(s). 
