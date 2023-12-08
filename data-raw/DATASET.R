@@ -1,4 +1,4 @@
-## The following creates a mock data frame.
+## code to prepare `DATASET` dataset goes here
 citation_data <- data.frame(
   authors = "Wang, H., Kindig, D. A., & Mullahy, J",
   year = "2005",
