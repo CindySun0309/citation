@@ -1,13 +1,24 @@
 Package: citation
 Title: Acquire APA citation and metadata
 Version: 0.0.0.9000
-Authors@R: 
-    person("Katy", "Cummings", , "kcummings.edu", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID")),
-    person("Elaine", "Xu", , "exu64@smith.edu", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID")),
-    person("Cindy", "Sun", , "csun76@smith.edu", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+Authors@R: c(
+    person(given = "Cindy", 
+    family = "Sun",
+    email = "csun76@smith.edu", 
+    role = c("aut","cre"),
+    comment = c(ORCID = "YOUR-ORCID-ID")),
+    person(given = "Elaine", 
+    family = "Xu", 
+    email = "exu64@smith.edu", 
+    role = "aut",
+    comment = c(ORCID = "YOUR-ORCID-ID")),
+    person(
+    given = "Katy", 
+    family = "Cummings", 
+    email = "kcummings@smith.edu", 
+    role = "aut", 
+    comment = c(ORCID = "YOUR-ORCID-ID")) 
+    )
 Description: 
       The purpose of this package, citation, is to make it easier for users to properly use/obtain an APA citation(s). 
       This package requires users to have a Google API code and the article title that they would like to have cited.
