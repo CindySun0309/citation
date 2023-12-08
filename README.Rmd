@@ -1,0 +1,47 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# citation
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of citation is to provide users an APA citation when given a user's Google API and article title. 
+
+## Installation
+
+You can install the development version of citation from [GitHub](https://github.com/) with:
+
+```{r}
+devtools::install_github("CindySun0309/citation")
+```
+
+## Attaining a Citation 
+
+Given a Google API code and article title, the `APA()` function quickly retrieves the APA information of an article from Google Scholar.  
+
+```{r example}
+api_example <- readLines("example_api_k.txt")
+library(citation)
+example <- APA("Variation in Chinese population health related quality of life: results from a EuroQol study in Beijing, China", api_example)
+example 
+```
+
+
+## Citation Data 
+The metadata that comes with the citation package contains an example data frame which has one row, an article, and columns which associate with parts of the APA citation.  
+
+```{r}
+head(citation_data)
